@@ -17,5 +17,4 @@ export class RequestValidationError extends CustomError {
             return { message: err.msg, field: err.param };
         });
     }
-
 }
