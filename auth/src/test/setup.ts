@@ -6,8 +6,10 @@ let mongo: any;
 
 beforeAll(async () => {
 
-    mongo = new MongoMemoryServer();
-    const mongoUri = await mongo.getUri();
+    process.env.JWT_KEY = 'asdf';
+
+    mongo = await MongoMemoryServer.create();
+    const mongoUri = mongo.getUri();
     await mongoose.connect(mongoUri);
 
 });
