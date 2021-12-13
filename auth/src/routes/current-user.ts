@@ -1,6 +1,6 @@
 import express from "express";
-import { currentUser } from "../middlewares/current-user";
-import { requireAuth } from "../middlewares/require-auth";
+import { currentUser } from "@alminadev/common";
+import { requireAuth } from "@alminadev/common";
 
 const router = express.Router();
 
