@@ -4,7 +4,7 @@ import Header from "../components/header";
 
 const AppComponent = ({ Component, pageProps, currentUser }) => {
   return (
-    <div>
+    <div className="container">
       <Header currentUser={currentUser} />
       <Component {...pageProps} />
     </div>
@@ -23,8 +23,8 @@ AppComponent.getInitialProps = async (appContext) => {
 
   return {
     pageProps,
-    ...data
-  }
+    ...data,
+  };
 };
 
 export default AppComponent;
